@@ -2,7 +2,7 @@
 
 return [
     '__name' => 'site-user',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getmim/site-user.git',
     '__license' => 'MIT',
     '__author' => [
@@ -43,7 +43,7 @@ return [
                     'value' => '/me'
                 ],
                 'handler' => 'SiteUser\\Controller\\User::me',
-                'method' => 'GET',
+                'method' => 'GET|POST',
                 'modules' => [
                     'site-user-login' => true 
                 ]
@@ -56,7 +56,7 @@ return [
                     ]
                 ],
                 'handler' => 'SiteUser\\Controller\\User::single',
-                'method' => 'GET'
+                'method' => 'GET|POST'
             ]
         ]
     ]
